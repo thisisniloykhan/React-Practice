@@ -1,7 +1,12 @@
 import "./App.css";
+import Page from "./Components/Page";
 
 function App() {
-  return <>hello from the react site</>;
+  return (
+    <>
+      <Page />
+    </>
+  );
 }
 
 export default App;
