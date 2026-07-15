@@ -2,8 +2,16 @@ import reactLogo from "../assets/react-logo.png";
 
 export default function Navbar() {
   return (
-    <header>
-      <img src={reactLogo} alt="react-logo" width="40px" />
+    <header className="header-section">
+      <nav className="nav-section">
+        <img
+          src={reactLogo}
+          alt="React logo"
+          width="40px"
+          className="nav-logo"
+        />
+        <span className="nav-title">ReactFacts</span>
+      </nav>
     </header>
   );
 }
