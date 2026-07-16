@@ -4,12 +4,7 @@ export default function Navbar() {
   return (
     <header className="header-section">
       <nav className="nav-section">
-        <img
-          src={reactLogo}
-          alt="React logo"
-          width="40px"
-          className="nav-logo"
-        />
+        <img src={reactLogo} alt="React logo" className="nav-logo" />
         <span className="nav-title">ReactFacts</span>
       </nav>
     </header>
