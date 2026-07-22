@@ -9,7 +9,8 @@ export default function MainContent() {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const newIngredient = formData.get("ingredient");
-    console.log(newIngredient);
+    ingredients.push(newIngredient);
+    console.log(ingredients);
   }
   return (
     <main>
@@ -25,4 +26,4 @@ export default function MainContent() {
       <ul>{ingredientsElement}</ul>
     </main>
   );
-}
+} 
