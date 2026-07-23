@@ -1,20 +1,20 @@
+import { useState } from "react";
+
 export default function MainContent() {
-  const ingredients = ["Chicken", "Oregano", "Tomatoes"];
+  const [ingredients, setIngredients] = useState([]);
 
   const ingredientsElement = ingredients.map((ingredient, index) => {
     return <li key={index}>{ingredient}</li>;
   });
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    const formData = new FormData(e.currentTarget);
+  function addIngredient(formData) {
     const newIngredient = formData.get("ingredient");
-    ingredients.push(newIngredient);
-    console.log(ingredients);
+    setIngredients((prevIngredients) => [...prevIngredients, newIngredient]);
   }
+
   return (
     <main>
-      <form action="" className="add-ingredient-form" onSubmit={handleSubmit}>
+      <form action={addIngredient} className="add-ingredient-form">
         <input
           type="text"
           placeholder="e.g. oregano"
@@ -26,4 +26,4 @@ export default function MainContent() {
       <ul>{ingredientsElement}</ul>
     </main>
   );
-} 
+}
